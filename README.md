@@ -49,7 +49,7 @@ Pinned Mode ensures the app stays in focus while still giving users a way to exi
 
 
 
-## Installation
+## 📦 Installation
 
 
 ```sh
@@ -57,7 +57,7 @@ npm install react-native-pinned-mode
 ```
 
 
-## Usage
+## ⚡ Usage
 
 
 ```js
@@ -67,20 +67,18 @@ import {
   isPinnedModeActive,
 } from 'react-native-pinned-mode';
 
-// ...
-
 const handlePinnedMode = async () => {
-    try {
-      console.log(isPinnedModeActive(), 'Is Pinned Mode Active');
-      if (!isPinnedModeActive()) {
-        await enablePinnedMode();
-      } else {
-        await disablePinnedMode();
-      }
-    } catch (e) {
-      console.log(e, 'Error');
+  try {
+    const active = await isPinnedModeActive();
+    if (!active) {
+      await enablePinnedMode();   // Enable pinned mode
+    } else {
+      await disablePinnedMode();  // Disable pinned mode
     }
-  };
+  } catch (e) {
+    console.log("Pinned Mode Error:", e);
+  }
+};
 ```
 
 ## 🚀 Publishing to Play Store
