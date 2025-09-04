@@ -14,11 +14,26 @@ npm install react-native-pinned-mode
 
 
 ```js
-import { multiply } from 'react-native-pinned-mode';
+import {
+  enablePinnedMode,
+  disablePinnedMode,
+  isPinnedModeActive,
+} from 'react-native-pinned-mode';
 
 // ...
 
-const result = multiply(3, 7);
+const handlePinnedMode = async () => {
+    try {
+      console.log(isPinnedModeActive(), 'Is Pinned Mode Active');
+      if (!isPinnedModeActive()) {
+        await enablePinnedMode();
+      } else {
+        await disablePinnedMode();
+      }
+    } catch (e) {
+      console.log(e, 'Error');
+    }
+  };
 ```
 
 
