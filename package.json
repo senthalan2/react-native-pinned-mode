@@ -1,14 +1,14 @@
 {
   "name": "react-native-pinned-mode",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "react-native-pinned-mode is a React Native library that enables developers to easily configure and control Android’s Pinned Mode. With this package, you can lock your app to the foreground and prevent users from leaving the app unintentionally — making it useful for scenarios where uninterrupted focus on a single app is required.",
-  "main": "./lib/module/index.js",
-  "types": "./lib/typescript/src/index.d.ts",
+  "main": "./src/index.tsx",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": {
-      "source": "./src/index.tsx",
-      "types": "./lib/typescript/src/index.d.ts",
-      "default": "./lib/module/index.js"
+     "source": "./src/index.tsx",
+      "types": "./src/index.d.ts",
+      "default": "./src/index.tsx"
     },
     "./package.json": "./package.json"
   },
